@@ -1,0 +1,2083 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Discover beautiful, beginner-friendly crochet PDF patterns. Download instantly and start creating today.">
+
+    <title>Complete Crochet Pattern Collection | ₹199</title>
+
+    <style>
+        /* =========================================
+           RESET
+        ========================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family:
+                Inter,
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                sans-serif;
+
+            color: #34251f;
+            background: #fffaf7;
+            line-height: 1.6;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button {
+            font-family: inherit;
+        }
+
+        /* =========================================
+           VARIABLES
+        ========================================= */
+
+        :root {
+            --primary: #d85c78;
+            --primary-dark: #b83f5c;
+            --secondary: #f9d9df;
+            --cream: #fffaf7;
+            --dark: #34251f;
+            --muted: #76645c;
+            --white: #ffffff;
+            --green: #3e8b61;
+            --gold: #e7a936;
+            --shadow:
+                0 15px 40px rgba(70, 35, 25, 0.10);
+        }
+
+        /* =========================================
+           COMMON
+        ========================================= */
+
+        .container {
+            width: min(1120px, 92%);
+            margin: auto;
+        }
+
+        .section {
+            padding: 85px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            max-width: 750px;
+            margin: 0 auto 50px;
+        }
+
+        .section-title .eyebrow {
+            display: inline-block;
+            color: var(--primary);
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: 13px;
+            margin-bottom: 10px;
+        }
+
+        .section-title h2 {
+            font-size: clamp(32px, 5vw, 48px);
+            line-height: 1.15;
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            color: var(--muted);
+            font-size: 17px;
+        }
+
+        /* =========================================
+           ANNOUNCEMENT BAR
+        ========================================= */
+
+        .announcement {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 10px 15px;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .announcement span {
+            color: #ffd36e;
+        }
+
+        /* =========================================
+           HERO
+        ========================================= */
+
+        .hero {
+            padding: 70px 0 80px;
+            background:
+                radial-gradient(
+                    circle at top right,
+                    #ffe3e8 0,
+                    transparent 35%
+                ),
+                linear-gradient(
+                    135deg,
+                    #fffaf7,
+                    #fff0f3
+                );
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.05fr .95fr;
+            align-items: center;
+            gap: 55px;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #fff;
+            color: var(--primary-dark);
+            border: 1px solid #f4c5cf;
+            border-radius: 999px;
+            padding: 8px 15px;
+            font-size: 13px;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 6vw, 70px);
+            line-height: 1.02;
+            letter-spacing: -2px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: var(--primary);
+        }
+
+        .hero-description {
+            font-size: 19px;
+            color: var(--muted);
+            max-width: 620px;
+            margin-bottom: 25px;
+        }
+
+        .benefit-list {
+            list-style: none;
+            display: grid;
+            gap: 9px;
+            margin-bottom: 28px;
+        }
+
+        .benefit-list li {
+            font-weight: 600;
+        }
+
+        .offer-box {
+            background: white;
+            border: 1px solid #f0d7d1;
+            border-radius: 20px;
+            padding: 20px;
+            max-width: 520px;
+            box-shadow: var(--shadow);
+        }
+
+        .offer-label {
+            color: var(--primary-dark);
+            font-weight: 900;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .price-row {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin: 5px 0 15px;
+        }
+
+        .old-price {
+            color: #9c918c;
+            text-decoration: line-through;
+            font-size: 18px;
+        }
+
+        .price {
+            color: var(--primary-dark);
+            font-size: 46px;
+            font-weight: 900;
+        }
+
+        .cta {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            border: 0;
+            border-radius: 13px;
+            background: linear-gradient(
+                135deg,
+                var(--primary),
+                var(--primary-dark)
+            );
+            color: white;
+            padding: 17px 25px;
+            font-size: 17px;
+            font-weight: 900;
+            cursor: pointer;
+            box-shadow:
+                0 10px 25px rgba(216, 92, 120, .28);
+            transition: .25s ease;
+        }
+
+        .cta:hover {
+            transform: translateY(-3px);
+            box-shadow:
+                0 15px 30px rgba(216, 92, 120, .35);
+        }
+
+        .small-note {
+            text-align: center;
+            color: #877873;
+            font-size: 12px;
+            margin-top: 10px;
+        }
+
+        .hero-image-wrap {
+            position: relative;
+        }
+
+        .hero-image {
+            background: white;
+            padding: 12px;
+            border-radius: 28px;
+            box-shadow: var(--shadow);
+            transform: rotate(1deg);
+        }
+
+        .hero-image img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+
+        .floating-card {
+            position: absolute;
+            bottom: 25px;
+            left: -25px;
+            background: white;
+            border-radius: 15px;
+            padding: 14px 18px;
+            box-shadow: var(--shadow);
+            font-weight: 800;
+        }
+
+        /* =========================================
+           TRUST BAR
+        ========================================= */
+
+        .trust-bar {
+            background: white;
+            border-top: 1px solid #f2e3df;
+            border-bottom: 1px solid #f2e3df;
+            padding: 22px 0;
+        }
+
+        .trust-grid {
+            display: grid;
+            grid-template-columns:
+                repeat(4, 1fr);
+            gap: 20px;
+            text-align: center;
+        }
+
+        .trust-item {
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .trust-item span {
+            display: block;
+            font-size: 25px;
+            margin-bottom: 4px;
+        }
+
+        /* =========================================
+           PROBLEM
+        ========================================= */
+
+        .problem {
+            background: white;
+        }
+
+        .problem-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .problem-card {
+            background: #fff5f1;
+            padding: 35px;
+            border-radius: 25px;
+        }
+
+        .problem-list {
+            list-style: none;
+            display: grid;
+            gap: 16px;
+        }
+
+        .problem-list li {
+            display: flex;
+            gap: 12px;
+            font-weight: 600;
+        }
+
+        .problem-list li span {
+            color: #d94c55;
+            font-weight: 900;
+        }
+
+        /* =========================================
+           PRODUCT COLLECTION
+        ========================================= */
+
+        .patterns-grid {
+            display: grid;
+            grid-template-columns:
+                repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .pattern-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid #f0e4df;
+            transition: .25s;
+        }
+
+        .pattern-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .pattern-card img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+        }
+
+        .pattern-content {
+            padding: 20px;
+        }
+
+        .pattern-content h3 {
+            margin-bottom: 7px;
+        }
+
+        .pattern-content p {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        /* =========================================
+           BENEFITS
+        ========================================= */
+
+        .benefits {
+            background: #fff3f5;
+        }
+
+        .benefit-grid {
+            display: grid;
+            grid-template-columns:
+                repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .benefit-card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(80, 40, 30, .06);
+        }
+
+        .benefit-icon {
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        .benefit-card p {
+            color: var(--muted);
+            margin-top: 8px;
+        }
+
+        /* =========================================
+           BONUS
+        ========================================= */
+
+        .bonus {
+            background: var(--dark);
+            color: white;
+        }
+
+        .bonus .section-title p {
+            color: #d9cbc6;
+        }
+
+        .bonus-grid {
+            display: grid;
+            grid-template-columns:
+                repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .bonus-card {
+            background: #46352f;
+            border: 1px solid #5b4740;
+            padding: 30px;
+            border-radius: 20px;
+        }
+
+        .bonus-number {
+            color: #ffd36e;
+            font-size: 13px;
+            font-weight: 900;
+            letter-spacing: 1px;
+        }
+
+        .bonus-card h3 {
+            margin: 10px 0;
+        }
+
+        .bonus-card p {
+            color: #d9cbc6;
+        }
+
+        .bonus-value {
+            margin-top: 20px;
+            color: #ffd36e;
+            font-weight: 900;
+        }
+
+        /* =========================================
+           VALUE STACK
+        ========================================= */
+
+        .value-box {
+            max-width: 760px;
+            margin: auto;
+            background: white;
+            border: 1px solid #eadbd6;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .value-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 18px 25px;
+            border-bottom: 1px solid #eee3df;
+        }
+
+        .value-total {
+            display: flex;
+            justify-content: space-between;
+            padding: 22px 25px;
+            background: #fff1c9;
+            font-weight: 900;
+        }
+
+        .today-price {
+            text-align: center;
+            padding: 30px;
+        }
+
+        .today-price small {
+            color: var(--muted);
+            font-weight: 700;
+        }
+
+        .today-price h3 {
+            font-size: 55px;
+            color: var(--primary-dark);
+            line-height: 1;
+            margin: 5px 0 20px;
+        }
+
+        .save {
+            color: var(--green);
+            font-weight: 900;
+            margin-bottom: 20px;
+        }
+
+        /* =========================================
+           WHO IT IS FOR
+        ========================================= */
+
+        .audience-grid {
+            display: grid;
+            grid-template-columns:
+                repeat(5, 1fr);
+            gap: 15px;
+        }
+
+        .audience-card {
+            text-align: center;
+            background: white;
+            padding: 25px 15px;
+            border-radius: 18px;
+            border: 1px solid #eee1dc;
+        }
+
+        .audience-card div {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .audience-card p {
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        /* =========================================
+           EMOTIONAL SECTION
+        ========================================= */
+
+        .dream-section {
+            background:
+                linear-gradient(
+                    135deg,
+                    #fff0f3,
+                    #fff9e8
+                );
+            text-align: center;
+        }
+
+        .dream-content {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .dream-content h2 {
+            font-size: clamp(35px, 5vw, 52px);
+            line-height: 1.15;
+            margin-bottom: 25px;
+        }
+
+        .dream-content p {
+            color: var(--muted);
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .dream-highlight {
+            font-size: 25px !important;
+            color: var(--dark) !important;
+            font-weight: 900;
+        }
+
+        /* =========================================
+           HOW IT WORKS
+        ========================================= */
+
+        .steps {
+            display: grid;
+            grid-template-columns:
+                repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .step {
+            text-align: center;
+            padding: 30px;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            display: grid;
+            place-items: center;
+            margin: auto auto 18px;
+            border-radius: 50%;
+            background: var(--secondary);
+            color: var(--primary-dark);
+            font-weight: 900;
+            font-size: 23px;
+        }
+
+        .step p {
+            color: var(--muted);
+        }
+
+        /* =========================================
+           REVIEWS
+        ========================================= */
+
+        .reviews {
+            background: #fff3f5;
+        }
+
+        .review-grid {
+            display: grid;
+            grid-template-columns:
+                repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .review {
+            background: white;
+            padding: 27px;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(80, 40, 30, .06);
+        }
+
+        .stars {
+            color: #f0ae24;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        .review p {
+            color: #594942;
+            font-style: italic;
+        }
+
+        .review-author {
+            margin-top: 18px;
+            font-weight: 900;
+            font-style: normal;
+        }
+
+        /* =========================================
+           FAQ
+        ========================================= */
+
+        .faq {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .faq-item {
+            background: white;
+            border: 1px solid #eaded9;
+            border-radius: 14px;
+            margin-bottom: 12px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 20px;
+            background: none;
+            border: 0;
+            display: flex;
+            justify-content: space-between;
+            text-align: left;
+            font-weight: 800;
+            font-size: 16px;
+            cursor: pointer;
+            color: var(--dark);
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 0 20px 20px;
+            color: var(--muted);
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question span {
+            transform: rotate(45deg);
+        }
+
+        .faq-question span {
+            transition: .2s;
+            font-size: 22px;
+        }
+
+        /* =========================================
+           FINAL CTA
+        ========================================= */
+
+        .final-cta {
+            background:
+                radial-gradient(
+                    circle at top left,
+                    #ffe1e8,
+                    transparent 35%
+                ),
+                #fff7f3;
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            font-size: clamp(38px, 5vw, 58px);
+            line-height: 1.1;
+            margin-bottom: 18px;
+        }
+
+        .final-cta p {
+            color: var(--muted);
+            font-size: 18px;
+            max-width: 650px;
+            margin: 0 auto 25px;
+        }
+
+        .final-price {
+            font-size: 55px;
+            color: var(--primary-dark);
+            font-weight: 900;
+            margin-bottom: 20px;
+        }
+
+        .final-button {
+            max-width: 500px;
+            margin: auto;
+        }
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        footer {
+            background: #2b211d;
+            color: #d9cbc6;
+            text-align: center;
+            padding: 35px 15px 90px;
+        }
+
+        footer h3 {
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        footer p {
+            font-size: 13px;
+            margin: 5px 0;
+        }
+
+        .footer-links {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            flex-wrap: wrap;
+            font-size: 13px;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        /* =========================================
+           MOBILE STICKY CTA
+        ========================================= */
+
+        .mobile-cta {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            z-index: 9999;
+            background: white;
+            padding: 10px;
+            box-shadow:
+                0 -5px 20px rgba(0,0,0,.12);
+        }
+
+        .mobile-cta .cta {
+            padding: 13px;
+            font-size: 15px;
+        }
+
+        /* =========================================
+           ANIMATION
+        ========================================= */
+
+        .fade-up {
+            animation:
+                fadeUp .7s ease both;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* =========================================
+           RESPONSIVE
+        ========================================= */
+
+        @media (max-width: 900px) {
+
+            .hero-grid,
+            .problem-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding-top: 50px;
+            }
+
+            .patterns-grid,
+            .benefit-grid,
+            .bonus-grid,
+            .review-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .audience-grid {
+                grid-template-columns:
+                    repeat(3, 1fr);
+            }
+
+            .steps {
+                grid-template-columns: 1fr;
+            }
+
+            .floating-card {
+                left: 10px;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .section {
+                padding: 60px 0;
+            }
+
+            .hero h1 {
+                letter-spacing: -1px;
+            }
+
+            .hero-description {
+                font-size: 16px;
+            }
+
+            .trust-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .patterns-grid,
+            .benefit-grid,
+            .bonus-grid,
+            .review-grid,
+            .audience-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .price {
+                font-size: 40px;
+            }
+
+            .value-row,
+            .value-total {
+                font-size: 14px;
+            }
+
+            .mobile-cta {
+                display: block;
+            }
+
+            footer {
+                padding-bottom: 90px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================================
+         ANNOUNCEMENT
+    ========================================== -->
+
+    <div class="announcement">
+        🔥 LIMITED-TIME OFFER — Get the Complete Collection for
+        <span>₹199</span>
+    </div>
+
+
+    <!-- =========================================
+         HERO
+    ========================================== -->
+
+    <section class="hero">
+
+        <div class="container hero-grid">
+
+            <div class="fade-up">
+
+                <div class="badge">
+                    🧶 DIGITAL CROCHET COLLECTION
+                </div>
+
+                <h1>
+                    Create Beautiful
+                    <span>Crochet Projects</span>
+                    From Home
+                </h1>
+
+                <p class="hero-description">
+                    Discover beautiful, easy-to-follow crochet PDF
+                    patterns and start creating handmade projects
+                    you'll be proud of.
+                </p>
+
+                <ul class="benefit-list">
+                    <li>✨ Beginner-friendly patterns</li>
+                    <li>📥 Instant digital download</li>
+                    <li>📖 Easy-to-follow PDF instructions</li>
+                    <li>🧶 Create projects at your own pace</li>
+                </ul>
+
+                <div class="offer-box">
+
+                    <div class="offer-label">
+                        🔥 SPECIAL OFFER
+                    </div>
+
+                    <div class="price-row">
+
+                        <span class="old-price">
+                            ₹499
+                        </span>
+
+                        <span class="price">
+                            ₹199
+                        </span>
+
+                    </div>
+
+                    <a
+                        href="YOUR_CHECKOUT_LINK_HERE"
+                        class="cta"
+                    >
+                        🧶 GET ALL PATTERNS NOW →
+                    </a>
+
+                    <div class="small-note">
+                        Instant digital access • No physical product
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-image-wrap">
+
+                <div class="hero-image">
+
+                    <!-- CHANGE THIS IMAGE -->
+                    <img
+                        src="https://images.unsplash.com/photo-1589999560271-3a5f4b4b9a56?auto=format&fit=crop&w=1000&q=80"
+                        alt="Crochet handmade project"
+                    >
+
+                </div>
+
+                <div class="floating-card">
+                    ⭐ Beginner Friendly
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         TRUST BAR
+    ========================================== -->
+
+    <section class="trust-bar">
+
+        <div class="container trust-grid">
+
+            <div class="trust-item">
+                <span>📥</span>
+                Instant Download
+            </div>
+
+            <div class="trust-item">
+                <span>🧶</span>
+                Easy Patterns
+            </div>
+
+            <div class="trust-item">
+                <span>📱</span>
+                Digital PDF
+            </div>
+
+            <div class="trust-item">
+                <span>💖</span>
+                Crochet Lovers
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         PROBLEM
+    ========================================== -->
+
+    <section class="section problem">
+
+        <div class="container problem-grid">
+
+            <div>
+
+                <div class="section-title"
+                     style="text-align:left; margin:0 0 25px;">
+
+                    <span class="eyebrow">
+                        SOUND FAMILIAR?
+                    </span>
+
+                    <h2>
+                        Love Crochet But Don't Know What To Make Next?
+                    </h2>
+
+                    <p>
+                        Finding good crochet patterns shouldn't
+                        take hours.
+                    </p>
+
+                </div>
+
+                <div class="problem-card">
+
+                    <ul class="problem-list">
+
+                        <li>
+                            <span>✕</span>
+                            Complicated instructions
+                        </li>
+
+                        <li>
+                            <span>✕</span>
+                            Difficult-to-follow patterns
+                        </li>
+
+                        <li>
+                            <span>✕</span>
+                            Hours spent searching for ideas
+                        </li>
+
+                        <li>
+                            <span>✕</span>
+                            Not knowing where to start
+                        </li>
+
+                        <li>
+                            <span>✕</span>
+                            Buying individual patterns
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <h2 style="font-size:36px; margin-bottom:20px;">
+                    That's exactly why we created this collection. ❤️
+                </h2>
+
+                <p style="color:var(--muted); font-size:17px;">
+                    Get a collection of beautiful crochet PDF
+                    patterns in one place and spend less time
+                    searching and more time creating.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         PATTERNS
+    ========================================== -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <span class="eyebrow">
+                    YOUR COLLECTION
+                </span>
+
+                <h2>
+                    What's Inside Your Crochet Pattern Collection?
+                </h2>
+
+                <p>
+                    Get access to beautiful digital patterns
+                    designed to inspire your next project.
+                </p>
+
+            </div>
+
+
+            <div class="patterns-grid">
+
+                <div class="pattern-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&fit=crop&w=800&q=80"
+                        alt="Crochet pattern"
+                    >
+
+                    <div class="pattern-content">
+                        <h3>🌸 Pattern #1</h3>
+
+                        <p>
+                            Create a beautiful handmade project
+                            using easy-to-follow instructions.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="pattern-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1590736969955-71cc94901144?auto=format&fit=crop&w=800&q=80"
+                        alt="Crochet pattern"
+                    >
+
+                    <div class="pattern-content">
+                        <h3>🧶 Pattern #2</h3>
+
+                        <p>
+                            A fun crochet project perfect for
+                            your next creative session.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="pattern-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1604881988758-f76ad2f7aac1?auto=format&fit=crop&w=800&q=80"
+                        alt="Crochet pattern"
+                    >
+
+                    <div class="pattern-content">
+                        <h3>💖 Pattern #3</h3>
+
+                        <p>
+                            Follow the instructions and turn
+                            your yarn into something beautiful.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div style="text-align:center; margin-top:35px;">
+
+                <h3 style="font-size:26px;">
+                    + More Beautiful Crochet Patterns
+                </h3>
+
+                <p style="color:var(--muted);">
+                    Replace these images with your actual product
+                    previews.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         BENEFITS
+    ========================================== -->
+
+    <section class="section benefits">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <span class="eyebrow">
+                    WHY YOU'LL LOVE IT
+                </span>
+
+                <h2>
+                    Everything You Need To Start Creating
+                </h2>
+
+            </div>
+
+
+            <div class="benefit-grid">
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">🧶</div>
+                    <h3>Beginner Friendly</h3>
+                    <p>
+                        Easy-to-understand patterns for people
+                        who are still learning crochet.
+                    </p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">📖</div>
+                    <h3>Easy Instructions</h3>
+                    <p>
+                        Follow the pattern step by step at
+                        your own pace.
+                    </p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">📱</div>
+                    <h3>Digital PDF</h3>
+                    <p>
+                        Access your patterns on your phone,
+                        tablet or computer.
+                    </p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">♾️</div>
+                    <h3>Create Again & Again</h3>
+                    <p>
+                        Keep your digital patterns and use
+                        them whenever you want.
+                    </p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎁</div>
+                    <h3>Perfect For Gifts</h3>
+                    <p>
+                        Create handmade gifts for friends
+                        and family.
+                    </p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">💰</div>
+                    <h3>Save Money</h3>
+                    <p>
+                        Get multiple patterns together instead
+                        of purchasing them individually.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         BONUSES
+    ========================================== -->
+
+    <section class="section bonus">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <span class="eyebrow">
+                    ORDER TODAY
+                </span>
+
+                <h2>
+                    🎁 Get These Exclusive Bonuses
+                </h2>
+
+                <p>
+                    Make your crochet journey even easier.
+                </p>
+
+            </div>
+
+
+            <div class="bonus-grid">
+
+                <div class="bonus-card">
+
+                    <div class="bonus-number">
+                        BONUS #1
+                    </div>
+
+                    <h3>
+                        Crochet Beginner Guide
+                    </h3>
+
+                    <p>
+                        A simple guide to help you understand
+                        the basics before starting.
+                    </p>
+
+                    <div class="bonus-value">
+                        VALUE ₹99
+                    </div>
+
+                </div>
+
+
+                <div class="bonus-card">
+
+                    <div class="bonus-number">
+                        BONUS #2
+                    </div>
+
+                    <h3>
+                        Crochet Stitch Cheat Sheet
+                    </h3>
+
+                    <p>
+                        Keep essential crochet stitches handy
+                        while working on your projects.
+                    </p>
+
+                    <div class="bonus-value">
+                        VALUE ₹99
+                    </div>
+
+                </div>
+
+
+                <div class="bonus-card">
+
+                    <div class="bonus-number">
+                        BONUS #3
+                    </div>
+
+                    <h3>
+                        Crochet Project Ideas
+                    </h3>
+
+                    <p>
+                        Get additional inspiration for your
+                        next handmade creation.
+                    </p>
+
+                    <div class="bonus-value">
+                        VALUE ₹149
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         VALUE STACK
+    ========================================== -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <span class="eyebrow">
+                    SPECIAL OFFER
+                </span>
+
+                <h2>
+                    Here's Everything You're Getting Today
+                </h2>
+
+            </div>
+
+
+            <div class="value-box">
+
+                <div class="value-row">
+                    <span>🧶 Crochet PDF Pattern Collection</span>
+                    <strong>₹499</strong>
+                </div>
+
+                <div class="value-row">
+                    <span>🎁 Beginner Crochet Guide</span>
+                    <strong>₹99</strong>
+                </div>
+
+                <div class="value-row">
+                    <span>🎁 Stitch Cheat Sheet</span>
+                    <strong>₹99</strong>
+                </div>
+
+                <div class="value-row">
+                    <span>🎁 Crochet Project Ideas</span>
+                    <strong>₹149</strong>
+                </div>
+
+                <div class="value-total">
+                    <span>TOTAL VALUE</span>
+                    <span>₹846</span>
+                </div>
+
+                <div class="today-price">
+
+                    <small>
+                        TODAY'S SPECIAL PRICE
+                    </small>
+
+                    <h3>
+                        ₹199
+                    </h3>
+
+                    <div class="save">
+                        YOU SAVE ₹647
+                    </div>
+
+                    <a
+                        href="YOUR_CHECKOUT_LINK_HERE"
+                        class="cta"
+                    >
+                        🔥 YES! I WANT THE PATTERNS →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         WHO IT IS FOR
+    ========================================== -->
+
+    <section class="section benefits">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <span class="eyebrow">
+                    MADE FOR YOU
+                </span>
+
+                <h2>
+                    Perfect For...
+                </h2>
+
+            </div>
+
+
+            <div class="audience-grid">
+
+                <div class="audience-card">
+                    <div>🧶</div>
+                    <p>Beginners</p>
+                </div>
+
+                <div class="audience-card">
+                    <div>🎨</div>
+                    <p>Crochet Lovers</p>
+                </div>
+
+                <div class="audience-card">
+                    <div>🎁</div>
+                    <p>DIY Lovers</p>
+                </div>
+
+                <div class="audience-card">
+                    <div>🏠</div>
+                    <p>Homemakers</p>
+                </div>
+
+                <div class="audience-card">
+                    <div>💰</div>
+                    <p>Crafters</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         EMOTIONAL SECTION
+    ========================================== -->
+
+    <section class="section dream-section">
+
+        <div class="container dream-content">
+
+            <h2>
+                ✨ Imagine Your Yarn Turning Into Something Beautiful...
+            </h2>
+
+            <p>
+                You pick up your favorite yarn.
+            </p>
+
+            <p>
+                You open your pattern.
+            </p>
+
+            <p>
+                You follow the instructions step by step.
+            </p>
+
+            <p class="dream-highlight">
+                And slowly... your yarn becomes something
+                you created with your own hands. ❤️
+            </p>
+
+            <p>
+                Your next crochet project is just one download away.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         HOW IT WORKS
+    ========================================== -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <span class="eyebrow">
+                    SIMPLE PROCESS
+                </span>
+
+                <h2>
+                    Get Started In 3 Simple Steps
+                </h2>
+
+            </div>
+
+
+            <div class="steps">
+
+                <div class="step">
+
+                    <div class="step-number">
+                        1
+                    </div>
+
+                    <h3>
+                        ORDER
+                    </h3>
+
+                    <p>
+                        Click the button and complete
+                        your purchase.
+                    </p>
+
+                </div>
+
+
+                <div class="step">
+
+                    <div class="step-number">
+                        2
+                    </div>
+
+                    <h3>
+                        DOWNLOAD
+                    </h3>
+
+                    <p>
+                        Receive access to your digital
+                        crochet PDF patterns.
+                    </p>
+
+                </div>
+
+
+                <div class="step">
+
+                    <div class="step-number">
+                        3
+                    </div>
+
+                    <h3>
+                        START CROCHETING
+                    </h3>
+
+                    <p>
+                        Grab your yarn, open your pattern
+                        and start creating!
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         REVIEWS
+    ========================================== -->
+
+    <section class="section reviews">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <span class="eyebrow">
+                    CUSTOMER LOVE
+                </span>
+
+                <h2>
+                    ❤️ Loved By Crochet Lovers
+                </h2>
+
+            </div>
+
+
+            <div class="review-grid">
+
+                <div class="review">
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+                    <p>
+                        "The patterns are so cute and easy
+                        to follow. I absolutely loved making them!"
+                    </p>
+
+                    <div class="review-author">
+                        — Verified Customer
+                    </div>
+
+                </div>
+
+
+                <div class="review">
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+                    <p>
+                        "Perfect for beginners. The instructions
+                        were much easier than I expected."
+                    </p>
+
+                    <div class="review-author">
+                        — Verified Customer
+                    </div>
+
+                </div>
+
+
+                <div class="review">
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+                    <p>
+                        "So many beautiful designs in one
+                        collection. Definitely worth it!"
+                    </p>
+
+                    <div class="review-author">
+                        — Verified Customer
+                    </div>
+
+                </div>
+
+            </div>
+
+            <p style="
+                text-align:center;
+                margin-top:25px;
+                color:#877873;
+                font-size:13px;
+            ">
+                Replace these placeholders with genuine
+                customer reviews.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         FAQ
+    ========================================== -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <span class="eyebrow">
+                    QUESTIONS
+                </span>
+
+                <h2>
+                    Frequently Asked Questions
+                </h2>
+
+            </div>
+
+
+            <div class="faq">
+
+                <div class="faq-item">
+
+                    <button class="faq-question">
+                        Is this a physical product?
+                        <span>+</span>
+                    </button>
+
+                    <div class="faq-answer">
+                        No. This is a digital crochet PDF
+                        pattern collection. Nothing will be
+                        shipped to your home.
+                    </div>
+
+                </div>
+
+
+                <div class="faq-item">
+
+                    <button class="faq-question">
+                        How will I receive the patterns?
+                        <span>+</span>
+                    </button>
+
+                    <div class="faq-answer">
+                        After successful payment, you'll receive
+                        access to download the digital files.
+                    </div>
+
+                </div>
+
+
+                <div class="faq-item">
+
+                    <button class="faq-question">
+                        Can beginners use these patterns?
+                        <span>+</span>
+                    </button>
+
+                    <div class="faq-answer">
+                        Yes. The collection is designed to be
+                        beginner-friendly. Difficulty may vary
+                        by individual pattern.
+                    </div>
+
+                </div>
+
+
+                <div class="faq-item">
+
+                    <button class="faq-question">
+                        Can I use the patterns on my phone?
+                        <span>+</span>
+                    </button>
+
+                    <div class="faq-answer">
+                        Yes. PDF files can be opened on your
+                        smartphone, tablet, laptop or computer.
+                    </div>
+
+                </div>
+
+
+                <div class="faq-item">
+
+                    <button class="faq-question">
+                        Will I receive a physical book?
+                        <span>+</span>
+                    </button>
+
+                    <div class="faq-answer">
+                        No. This is a digital PDF product.
+                        No physical product will be shipped.
+                    </div>
+
+                </div>
+
+
+                <div class="faq-item">
+
+                    <button class="faq-question">
+                        Can I sell finished crochet products?
+                        <span>+</span>
+                    </button>
+
+                    <div class="faq-answer">
+                        This depends on your pattern license.
+                        Clearly state your commercial-use
+                        policy here.
+                    </div>
+
+                </div>
+
+
+                <div class="faq-item">
+
+                    <button class="faq-question">
+                        What is your refund policy?
+                        <span>+</span>
+                    </button>
+
+                    <div class="faq-answer">
+                        Replace this text with your actual
+                        digital-product refund policy.
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         FINAL CTA
+    ========================================== -->
+
+    <section class="section final-cta">
+
+        <div class="container">
+
+            <h2>
+                🧶 Your Next Crochet Project Is Waiting...
+            </h2>
+
+            <p>
+                Don't spend hours searching for your next pattern.
+                Get the collection and start creating beautiful
+                handmade projects today.
+            </p>
+
+            <div class="final-price">
+                ₹199
+            </div>
+
+            <div class="final-button">
+
+                <a
+                    href="YOUR_CHECKOUT_LINK_HERE"
+                    class="cta"
+                >
+                    🔥 YES! GET MY CROCHET PATTERNS →
+                </a>
+
+            </div>
+
+            <p style="
+                font-size:13px;
+                margin-top:12px;
+            ">
+                Digital product • Instant access • No physical shipping
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer>
+
+        <h3>
+            🧶 YOUR BRAND NAME
+        </h3>
+
+        <p>
+            Beautiful crochet patterns for creative makers.
+        </p>
+
+        <div class="footer-links">
+
+            <a href="#">
+                Privacy Policy
+            </a>
+
+            <a href="#">
+                Terms & Conditions
+            </a>
+
+            <a href="#">
+                Refund Policy
+            </a>
+
+            <a href="#">
+                Contact Us
+            </a>
+
+        </div>
+
+        <p style="margin-top:20px;">
+            © 2026 Your Brand Name. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- =========================================
+         MOBILE STICKY CTA
+    ========================================== -->
+
+    <div class="mobile-cta">
+
+        <a
+            href="YOUR_CHECKOUT_LINK_HERE"
+            class="cta"
+        >
+            🧶 GET THE PATTERNS — ₹199 →
+        </a>
+
+    </div>
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script>
+
+        /* =========================================
+           FAQ ACCORDION
+        ========================================== */
+
+        const faqItems =
+            document.querySelectorAll(".faq-item");
+
+        faqItems.forEach(item => {
+
+            const question =
+                item.querySelector(".faq-question");
+
+            question.addEventListener("click", () => {
+
+                const isActive =
+                    item.classList.contains("active");
+
+                faqItems.forEach(other => {
+                    other.classList.remove("active");
+                });
+
+                if (!isActive) {
+                    item.classList.add("active");
+                }
+
+            });
+
+        });
+
+
+        /* =========================================
+           SMOOTH CTA TRACKING
+        ========================================== */
+
+        const checkoutButtons =
+            document.querySelectorAll(
+                'a[href="YOUR_CHECKOUT_LINK_HERE"]'
+            );
+
+        checkoutButtons.forEach(button => {
+
+            button.addEventListener("click", () => {
+
+                console.log(
+                    "Checkout button clicked"
+                );
+
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>

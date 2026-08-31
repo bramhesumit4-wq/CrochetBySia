@@ -339,6 +339,182 @@
             color: #d94c55;
             font-weight: 900;
         }
+        /* =========================================================
+   CROCHET CATEGORIES
+   ========================================================= */
+.categories-section {
+    padding: 70px 0 25px;
+    background: linear-gradient(180deg, var(--cream), #fff4f6);
+}
+
+.categories-intro {
+    max-width: 780px;
+    margin: 0 auto 35px;
+    text-align: center;
+}
+
+.categories-intro .eyebrow {
+    margin-bottom: 8px;
+}
+
+.categories-intro h2 {
+    margin-bottom: 12px;
+    font-size: clamp(30px, 4vw, 44px);
+    line-height: 1.15;
+}
+
+.categories-intro p {
+    max-width: 680px;
+    margin: auto;
+    color: var(--muted);
+    font-size: 16px;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+}
+
+.category-card {
+    position: relative;
+    min-height: 135px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 12px;
+    border: 1px solid #f0dfda;
+    border-radius: 18px;
+    background: var(--white);
+    text-align: center;
+    box-shadow: 0 8px 22px rgba(80, 40, 30, .06);
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        border-color .25s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    border-color: #efb6c2;
+    box-shadow: 0 15px 30px rgba(216, 92, 120, .13);
+}
+
+.category-icon {
+    width: 52px;
+    height: 52px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    background: #fff0f3;
+    font-size: 27px;
+}
+
+.category-card h3 {
+    font-size: 15px;
+    line-height: 1.25;
+}
+
+.category-card p {
+    margin-top: 4px;
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.category-more {
+    border: 1px solid transparent;
+    background: linear-gradient(
+        135deg,
+        var(--primary),
+        var(--primary-dark)
+    );
+    color: var(--white);
+    box-shadow: 0 12px 25px rgba(216, 92, 120, .22);
+}
+
+.category-more .category-icon {
+    background: rgba(255, 255, 255, .18);
+}
+
+.category-more p {
+    color: #ffe5eb;
+}
+
+.category-more:hover {
+    border-color: transparent;
+    box-shadow: 0 17px 35px rgba(216, 92, 120, .30);
+}
+
+/* Categories Tablet */
+@media (max-width: 900px) {
+    .categories-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Categories Mobile */
+@media (max-width: 600px) {
+    .categories-section {
+        padding: 48px 0 12px;
+    }
+
+    .categories-intro {
+        margin-bottom: 25px;
+    }
+
+    .categories-intro h2 {
+        font-size: 29px;
+    }
+
+    .categories-intro p {
+        font-size: 14px;
+        line-height: 1.55;
+    }
+
+    .categories-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 11px;
+    }
+
+    .category-card {
+        min-height: 120px;
+        padding: 16px 8px;
+        border-radius: 15px;
+    }
+
+    .category-icon {
+        width: 45px;
+        height: 45px;
+        margin-bottom: 8px;
+        border-radius: 13px;
+        font-size: 23px;
+    }
+
+    .category-card h3 {
+        font-size: 14px;
+    }
+
+    .category-card p {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 360px) {
+    .categories-grid {
+        gap: 8px;
+    }
+
+    .category-card {
+        min-height: 110px;
+        padding: 12px 6px;
+    }
+
+    .category-card h3 {
+        font-size: 12px;
+    }
+}
 
         /* Product Collection */
         .patterns-grid {
@@ -1325,6 +1501,101 @@
 
         </div>
     </section>
+
+    <!-- =========================================================
+     CROCHET CATEGORIES
+     ========================================================= -->
+<section class="categories-section">
+    <div class="container">
+
+        <div class="categories-intro">
+            <span class="eyebrow">EXPLORE BY CATEGORY</span>
+
+            <h2>19+ Crochet Categories to Explore 🧶</h2>
+
+            <p>
+                From cute animals and amigurumi to beautiful flowers,
+                accessories and home projects — discover crochet patterns
+                for every creative mood.
+            </p>
+        </div>
+
+        <div class="categories-grid">
+
+            <!-- Category 1 -->
+            <div class="category-card">
+                <div class="category-icon">🐻</div>
+                <h3>Animals</h3>
+                <p>Cute handmade friends</p>
+            </div>
+
+            <!-- Category 2 -->
+            <div class="category-card">
+                <div class="category-icon">🧸</div>
+                <h3>Amigurumi</h3>
+                <p>Adorable yarn creations</p>
+            </div>
+
+            <!-- Category 3 -->
+            <div class="category-card">
+                <div class="category-icon">🪀</div>
+                <h3>Toys</h3>
+                <p>Fun projects to make</p>
+            </div>
+
+            <!-- Category 4 -->
+            <div class="category-card">
+                <div class="category-icon">🌸</div>
+                <h3>Flowers</h3>
+                <p>Beautiful forever blooms</p>
+            </div>
+
+            <!-- Category 5 -->
+            <div class="category-card">
+                <div class="category-icon">👜</div>
+                <h3>Bags</h3>
+                <p>Stylish handmade bags</p>
+            </div>
+
+            <!-- Category 6 -->
+            <div class="category-card">
+                <div class="category-icon">🧣</div>
+                <h3>Blankets</h3>
+                <p>Cozy crochet comfort</p>
+            </div>
+
+            <!-- Category 7 -->
+            <div class="category-card">
+                <div class="category-icon">🔑</div>
+                <h3>Keychains</h3>
+                <p>Small &amp; adorable projects</p>
+            </div>
+
+            <!-- Category 8 -->
+            <div class="category-card">
+                <div class="category-icon">❤️</div>
+                <h3>Accessories</h3>
+                <p>Creative finishing touches</p>
+            </div>
+
+            <!-- Category 9 -->
+            <div class="category-card">
+                <div class="category-icon">🏠</div>
+                <h3>Home Decor</h3>
+                <p>Make your space beautiful</p>
+            </div>
+
+            <!-- Category 10 -->
+            <div class="category-card category-more">
+                <div class="category-icon">✨</div>
+                <h3>10+ More</h3>
+                <p>Explore even more categories</p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
 
     <!-- =========================================================
          PRODUCT COLLECTION

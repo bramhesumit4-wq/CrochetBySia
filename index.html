@@ -2212,9 +2212,12 @@ src="https://www.facebook.com/tr?id=1060207040315766&ev=PageView&noscript=1"
 
         checkoutButtons.forEach((button) => {
             button.addEventListener("click", () => {
-                console.log("CrochetBySia checkout button clicked");
-            });
+                fbq('track', 'InitiateCheckout', {
+                    value: 199.00,
+                    currency: 'INR'
         });
+    });
+});
     </script>
 
 </body>

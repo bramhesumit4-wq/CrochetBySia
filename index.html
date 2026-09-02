@@ -2210,15 +2210,22 @@ src="https://www.facebook.com/tr?id=1060207040315766&ev=PageView&noscript=1"
             'a[href="https://superprofile.bio/vp/printable-coring-book"]'
         );
 
-        checkoutButtons.forEach((button) => {
-            button.addEventListener("click", () => {
-                fbq('track', 'InitiateCheckout', {
-                    value: 199.00,
-                    currency: 'INR'
+       checkoutButtons.forEach((button) => {
+    button.addEventListener("click", function (event) {
+        event.preventDefault();
+
+        const checkoutUrl = this.href;
+
+        fbq('track', 'InitiateCheckout', {
+            value: 199.00,
+            currency: 'INR'
         });
+
+        setTimeout(function () {
+            window.location.href = checkoutUrl;
+        }, 800);
     });
-});
-    </script>
+});    </script>
 
 </body>
 </html>
